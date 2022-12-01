@@ -18,7 +18,6 @@ services:
       - 8000:8000
     depends_on:
       - mysql_db
-    command: bash -c "/usr/wait.sh --timeout=0 mysql_db:3306 && php artisan migrate && php artisan serve --host 0.0.0.0"
   
   nginx:
     image: nginx
